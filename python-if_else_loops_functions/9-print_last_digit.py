@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def print_last_digit(number):
+    if number < 0:
+        number = -number
     r = number % 10
+    print(r)
     return r
-print(print_last_digit(88888888888888888888888888887))

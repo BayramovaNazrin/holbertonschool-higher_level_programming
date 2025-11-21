@@ -5,9 +5,9 @@ for i in range(0, 10):
             if "{:d}{:d}".format(i, j) < "{:d}{:d}".format(j, i):
                 print(
                     "{:d}{:d}".format(i, j),
-                     end=", "
-                     if "{:d}{:d}".format(i, j) != str(89) 
-                     else "\n"
+                    end=", "
+                    if "{:d}{:d}".format(i, j) != str(89)
+                    else "\n"
                 )
             else:
                 continue

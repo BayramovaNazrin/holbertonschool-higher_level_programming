@@ -2,10 +2,9 @@
 def uppercase(str):
     result=""
     for l in str:
-        if ord('a') <= ord(l) <= ord('z'):
+        if ord('A') <= ord(l) <= ord('Z'):
             result += l
         else: 
-            u = ord(l) + 32
+            u = ord(l) - 32
             result += chr(u)
-    return result
-print(uppercase('ABAHA'))"
+    print("{}".format(result))

@@ -4,6 +4,8 @@ if __name__ == "__main__":
     a = len(sys.argv)-1
     if a == 1:
         print("{} argument:".format(a))
+    elif a == 0:
+        print("0 argument.")
     else:
         print("{} arguments:".format(a))
     for i in range(1, a+1):

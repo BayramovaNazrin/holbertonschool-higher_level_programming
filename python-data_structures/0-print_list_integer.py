@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    from main_0 import print_list_integer
-    str = my_list
+    import main_0
     for i in my_list:
         print("{:d}".format())

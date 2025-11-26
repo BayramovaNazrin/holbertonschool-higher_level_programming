@@ -2,5 +2,5 @@
 if __name__ == "__main__":
     from 0-main import print_list_integer
     str = my_list
-    for i in my_list:
+    for {:d} in my_list:
         print(str.format())

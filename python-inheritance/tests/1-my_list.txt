@@ -1,1 +1,11 @@
-pass
+This file contains the doctests for the MyList class.
+It checks that print_sorted() prints a sorted list without modifying the original list.
+
+>>> from 1-my_list import MyList
+>>> m = MyList()
+>>> m.append(3)
+>>> m.append(1)
+>>> m.append(2)
+>>> m.print_sorted()
+[1, 2, 3]
+

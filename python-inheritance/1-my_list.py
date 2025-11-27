@@ -9,3 +9,6 @@ class MyList(list):
     def print_sorted(self):
         """Print the list sorted in ascending order."""
         print(sorted(self))
+
+    def __str__(self):
+        return list.__str__(self)

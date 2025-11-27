@@ -1,1 +1,9 @@
 This file contains doctests for the MyList class.
+
+>>> MyList = __import__("1-my_list").MyList
+>>> m = MyList()
+>>> m.append(3)
+>>> m.append(1)
+>>> m.append(2)
+>>> m.print_sorted()
+[1, 2, 3]

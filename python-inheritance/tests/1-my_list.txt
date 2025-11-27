@@ -5,5 +5,8 @@ This file contains doctests for the MyList class.
 >>> m.append(3)
 >>> m.append(1)
 >>> m.append(2)
+>>> m.append(0)
+>>> m.append(-1)
+>>> m.append(-5)
 >>> m.print_sorted()
-[1, 2, 3]
+[-5, -1, 0, 1, 2, 3]

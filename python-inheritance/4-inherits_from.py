@@ -4,4 +4,4 @@
 
 def inherits_from(obj, a_class):
     """chech inherits"""
-    issubclass(obj, a_class)
+    return issubclass(obj, a_class)

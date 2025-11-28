@@ -10,7 +10,7 @@ test geo
 >>> bg.integer_validator("Nezi", "vey")
 Traceback (most recent call last):
 ...
-TypeError: name must be an integer
+TypeError: "vey" must be an integer
 
 # Invalid
 >>> bg.integer_validator("Nezi", 0)

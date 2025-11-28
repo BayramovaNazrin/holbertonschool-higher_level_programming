@@ -1,5 +1,5 @@
 test geo
->>> BaseGeometry = __import__('7-base-geometry').BaseGeometry
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
 
 # Valid Cases
@@ -10,7 +10,7 @@ test geo
 >>> bg.integer_validator("Nezi", "vey")
 Traceback (most recent call last):
 ...
-TypeError: "vey" must be an integer
+TypeError: vey must be an integer
 
 # Invalid
 >>> bg.integer_validator("Nezi", 0)

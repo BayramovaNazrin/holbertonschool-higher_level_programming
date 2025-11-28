@@ -1,0 +1,25 @@
+test geo
+>>> BaseGeometry = __import__('7-base-geometry').BaseGeometry
+>>> bg = BaseGeometry()
+
+# Valid Cases
+>>> bg.integer_validator("Nazi", 12)
+>>> bg.integer_validator("Jal", 23)
+
+# Invalid
+>>> bg.integer_validator("Nezi", "vey")
+Traceback (most recent call last):
+...
+TypeError: value must be an integer
+
+# Invalid
+>>> bg.integer_validator("Nezi", 0)
+Traceback (most recent call last):
+...
+ValueError: age must be greater than 0
+
+# Invalid
+>>> bg.integer.validator("Nezi", -2)
+Traceback (most recent call last):
+...
+ValueError: distance must be greater than 0

@@ -25,7 +25,7 @@ Traceback (most recent call last):
 ValueError: distance must be greater than 0
 
 # area() should raise an exception
->>> BaseGeometry = __import__('base_geometry_7_1').BaseGeometry
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
 >>> bg.area()
 Traceback (most recent call last):

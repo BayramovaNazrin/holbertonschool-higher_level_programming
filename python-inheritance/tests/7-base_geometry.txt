@@ -23,3 +23,11 @@ ValueError: Nezi must be greater than 0
 Traceback (most recent call last):
 ...
 ValueError: distance must be greater than 0
+
+# area() should raise an exception
+>>> BaseGeometry = __import__('base_geometry_7_1').BaseGeometry
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented

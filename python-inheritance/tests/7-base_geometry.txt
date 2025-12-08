@@ -10,16 +10,16 @@ test geo
 >>> bg.integer_validator("Nezi", "vey")
 Traceback (most recent call last):
 ...
-TypeError: vey must be an integer
+TypeError: Nezi must be an integer
 
 # Invalid
 >>> bg.integer_validator("Nezi", 0)
 Traceback (most recent call last):
 ...
-ValueError: age must be greater than 0
+ValueError: Nezi must be greater than 0
 
 # Invalid
->>> bg.integer.validator("Nezi", -2)
+>>> bg.integer_validator("distance", -2)
 Traceback (most recent call last):
 ...
 ValueError: distance must be greater than 0

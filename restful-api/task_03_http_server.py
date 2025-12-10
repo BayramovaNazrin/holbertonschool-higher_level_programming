@@ -43,5 +43,5 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
         server = HTTPServer(("", 8000), SimpleAPIHandler)
         server.serve_forever()
 
-    if __name__ == '__main__':
-        run()
+ if __name__ == '__main__':
+    run()

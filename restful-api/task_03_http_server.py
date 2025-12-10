@@ -39,9 +39,9 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(b"Endpoint not found")
 
-    def run():
-        server = HTTPServer(("", 8000), SimpleAPIHandler)
-        server.serve_forever()
+def run():
+    server = HTTPServer(("", 8000), SimpleAPIHandler)
+    server.serve_forever()
 
  if __name__ == '__main__':
     run()

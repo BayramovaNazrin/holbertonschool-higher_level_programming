@@ -16,7 +16,7 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
 
         elif self.path == "/data":
             data = {
-                "name": "Json",
+                "name": "John",
                 "age": 30,
                 "city": "New York"
             }

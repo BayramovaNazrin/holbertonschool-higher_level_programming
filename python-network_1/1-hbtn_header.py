@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 # response header value
 """
 Python script that takes in a URL, sends a request to the URL and displays

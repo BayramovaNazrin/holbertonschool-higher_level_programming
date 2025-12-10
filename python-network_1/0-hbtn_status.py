@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#fetch url
+# fetch url
 """
 Fetches https://alx-intranet.hbtn.io/status and prints the response.
 """

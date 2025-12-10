@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # github
 """
-GitHub credentials (username and password) and uses the GitHub API to display id
+GitHub cred and uses the GitHub API to display id
 """
 import sys
 import requests

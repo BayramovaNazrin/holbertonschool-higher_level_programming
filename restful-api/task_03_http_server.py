@@ -12,7 +12,7 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header("Content-Type", "text/plain")
             self.end_headers()
-            self_wfile.write(b"Hello, this is a simple API!")
+            self.wfile.write(b"Hello, this is a simple API!")
 
         elif self.path == "/data":
             data = {
@@ -29,7 +29,7 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
 
         elif self.path == "/status":
             self.send_response(200)
-            self.send_header("Content-Type", "text-plain")
+            self.send_header("Content-Type", "text/plain")
             self.end_headers()
             self.wfile.write(b"OK")
 
@@ -43,5 +43,5 @@ def run():
     server = HTTPServer(("", 8000), SimpleAPIHandler)
     server.serve_forever()
 
- if __name__ == '__main__':
+if __name__ == '__main__':
     run()

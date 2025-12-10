@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # Error code
 """
-takes in a URL, sends a request to the URL and displays the body of the response
+sends a request to the URL and displays the body of the response
 """
 import urllib.request
 import sys

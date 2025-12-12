@@ -1,0 +1,14 @@
+<html>
+<head>
+	<title>Items List</title>
+</head>
+<body>
+	<ul id="list">
+	{% for items in list %}
+		<li>{{ user }}</li>
+	{% else %}
+		<li><b>No items found</b></li>
+	{% endfor %}
+	</ul>
+</body>
+</html>

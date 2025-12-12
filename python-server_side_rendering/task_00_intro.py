@@ -4,7 +4,7 @@ import os
 
 def generate_invitations(template, attendees):
     # Input type validation
-    if not isinstance(template, isinstance(template, str)):
+    if not isinstance(template, str):
         print("Invalid input: template must be a string.")
         return
     

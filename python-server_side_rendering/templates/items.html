@@ -3,12 +3,14 @@
 	<title>Items List</title>
 </head>
 <body>
+	{% if list %}
 	<ul>
 	{% for item in list %}
 		<li>{{ item }}</li>
-	{% else %}
-		<li><b>No items found</b></li>
-	{% endfor %}
+	<% endfor %>
 	</ul>
+	{% else %}
+		<b>No items found</b>
+	{% endif %}
 </body>
 </html>

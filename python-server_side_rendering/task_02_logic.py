@@ -18,7 +18,7 @@ def contact():
 @app.route('/items')
 def items():
     items = ["Python Book", "Flask Mug", "Jinja Sticker"]
-    return render_template('items.html', list=items)
+    return render_template('items.html', items=items)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)

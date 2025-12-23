@@ -5,9 +5,9 @@
 <body>
 	{% if list %}
 	<ul>
-	{% for item in list %}
-		<li>{{ item }}</li>
-	<% endfor %>
+		{% for item in list %}
+			<li>{{ item }}</li>
+		<% endfor %>
 	{% else %}
 		<b>No items found</b>
 	</ul>

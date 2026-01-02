@@ -51,9 +51,9 @@ def products():
     
     products_list = []
     if source == 'json':
-        product_list = read_json_file()
+        products_list = read_json_file()
     elif source == 'csv':
-        product_list = read_csv_file() 
+        products_list = read_csv_file() 
     else:
         return render_template('product_display.html', error="Wrong source")
 

@@ -1,14 +1,29 @@
 from flask import Flask, render_template
 from flask import request
 import json
+import csv
 
 app = Flask(__name__)
 
-with open("products.csv", "r") as f:
-    data = csv.DictReader(f)
+def read_json_file():
+    try:
+        with open('products.json', 'r') as f:
+            return json.load(f)
+        except FileNotFoundError:
+            return []
 
-def table():
-    return render_template('product_display.html', headings=headings, data=data)
+def read_csv_file():
+    data = []
+    try:
+        with open('products.csv', 'r') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                row['id'] = int(row['id'])
+                row['price'] = float(row['price'])
+                data.append(row)
+            return data
+        except FileNotFoundError:
+            return []
 
 @app.route('/')
 def home():
@@ -29,11 +44,32 @@ def items():
     items_list = data.get('items', [])
     return render_template('items.html', items=items_list)
 
-@app.route('/query_example')
-def query_example():
-    request
+@app.route('/products')
+def products():
     source = request.args.get('source')
-    id = request.args.get('id')
+    product_id = request.args.get('id')
+
+    if source == 'json':
+        product_list = read_json_file()
+    elif source == 'csv':
+        product_list = read_csv_file() 
+    else:
+        return render_template('product_display.html', error="Wrong source")
+
+    if product_id:
+        try:
+            p_id = int(product_id)
+            filtered_products = [p for p in products_list if p['id'] == p_id]
+            if not filtered_products:
+                return render_template('product_display.html', error="Product was not found")
+
+            products_list = filtered_products
+
+        except ValueError:
+            return render_template('product_display.html', error="Invalid ID format")
+
+
+    return render_template('product_display.html', products=products_list)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)

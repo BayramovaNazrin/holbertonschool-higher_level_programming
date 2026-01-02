@@ -5,10 +5,17 @@
 	<body>
 		<table>
 			<tr>
-				<th>Name</th>
-				<th>Category</th>
-				<th>Price</th>
+				{% for header in headings %}
+				<th>{{ header }}</th>
+				{% endfor %}
 			</tr>
+			{% for row in data%}
+			<tr>
+				{% for cell in row %}
+				<td>{{ cell }}</td>
+				{% endfor%}
+			</tr>
+			{% endfor %}
 		</table>
 	</body>
 </html>

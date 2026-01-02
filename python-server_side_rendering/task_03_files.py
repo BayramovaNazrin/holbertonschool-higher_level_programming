@@ -4,6 +4,9 @@ import json
 
 app = Flask(__name__)
 
+with open("products.csv", "r") as f:
+    data = csv.DictReader(f)
+
 def table():
     return render_template('product_display.html', headings=headings, data=data)
 

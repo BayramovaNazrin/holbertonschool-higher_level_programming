@@ -62,7 +62,7 @@ def products():
             p_id = int(product_id)
             filtered_products = [p for p in products_list if p['id'] == p_id]
             if not filtered_products:
-                return render_template('product_display.html', error="Product was not found")
+                return render_template('product_display.html', error="Product not found")
 
             products_list = filtered_products
 

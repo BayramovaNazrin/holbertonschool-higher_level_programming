@@ -9,7 +9,7 @@ def read_json_file():
     try:
         with open('products.json', 'r') as f:
             return json.load(f)
-        except FileNotFoundError:
+    except FileNotFoundError:
             return []
 
 def read_csv_file():
@@ -22,7 +22,7 @@ def read_csv_file():
                 row['price'] = float(row['price'])
                 data.append(row)
             return data
-        except FileNotFoundError:
+    except FileNotFoundError:
             return []
 
 @app.route('/')

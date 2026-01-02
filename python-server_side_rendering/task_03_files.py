@@ -48,7 +48,8 @@ def items():
 def products():
     source = request.args.get('source')
     product_id = request.args.get('id')
-
+    
+    products_list = []
     if source == 'json':
         product_list = read_json_file()
     elif source == 'csv':

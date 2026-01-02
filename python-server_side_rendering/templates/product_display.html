@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-	</head>
-	<body>
-		<table>
-			<tr>
-				{% for header in headings %}
-				<th>{{ header }}</th>
-				{% endfor %}
-			</tr>
-			{% for row in data%}
-			<tr>
-				{% for cell in row %}
-				<td>{{ cell }}</td>
-				{% endfor%}
-			</tr>
-			{% endfor %}
-		</table>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <title>Product Display</title>
+</head>
+<body>
+
+    {% if error %}
+        <h1 style="color: red;">Error: {{ error }}</h1>
+    
+    {% else %}
+        <h1>Product List</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                <tr>
+                    <td>{{ product['name'] }}</td>
+                    <td>{{ product['category'] }}</td>
+                    <td>{{ product['price'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+
+</body>
 </html>
